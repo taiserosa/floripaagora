@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#132B50"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Rounded Custom Checked Icon representation -->
+    <TextView
+        android:id="@+id/tvChecksIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="✓"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@android:drawable/presence_online"
+        android:layout_marginRight="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Title of event -->
+        <TextView
+            android:id="@+id/tvEventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <!-- Subtitle details -->
+        <TextView
+            android:id="@+id/tvEventDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#93C5FD"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp" />
+
+        <!-- Badges line layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
+
+            <!-- Price Badge pill -->
+            <TextView
+                android:id="@+id/tvEventPriceTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_marginRight="8dp" />
+
+            <!-- Community suggestions tag badge (Visible conditionally) -->
+            <TextView
+                android:id="@+id/tvComunidadeTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👥 Sugerido por usuário"
+                android:textColor="#F59E0B"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="#15F59E0B"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

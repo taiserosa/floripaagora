@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1E3F"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 Sugerir Novo Evento"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seu evento será listado instantaneamente de forma offline."
+            android:textSize="12sp"
+            android:textColor="#94A3B8"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título do Evento *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: Workshop de Renda de Bilro FMP"
+            android:textColorHint="#475569"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Descrição -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição Completa *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="top|left"
+            android:hint="Descreva o que acontecerá, quem se apresenta..."
+            android:textColorHint="#475569"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Categoria Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione a Categoria *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bairro Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bairro / Região *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spBairro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Data e Hora -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data do Evento *"
+                    android:textColor="#A5B4FC"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="YYYY-MM-DD"
+                    android:textColorHint="#475569"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2C5FD3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hora de Início *"
+                    android:textColor="#A5B4FC"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="HH:MM"
+                    android:textColorHint="#475569"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2C5FD3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Local e Endereço -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Local (Ex: Teatro Pedro Ivo) *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: Centro de Convenções FIESC"
+            android:textColorHint="#475569"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço Completo *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: Rodovia SC-401, Km 5, n 450"
+            android:textColorHint="#475569"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Ingresso Cobrança -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarifário / Ingresso *"
+            android:textColor="#A5B4FC"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <RadioGroup
+            android:id="@+id/rgPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/rbGratuito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gratuito"
+                android:textColor="#FFFFFF"
+                android:checked="true"
+                android:layout_marginRight="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbPago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pago"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etPrecoValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor Cobrado (Ex: 40,00)"
+            android:textColorHint="#475569"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botões de ação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar"
+                android:backgroundTint="#475569"
+                android:textColor="#FFFFFF"
+                android:layout_marginRight="8dp" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gravar Evento"
+                android:backgroundTint="#10B981"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Floripa Agora</string>
+
+    <string-array name="categorias_array">
+        <item>Shows</item>
+        <item>Feiras</item>
+        <item>Esportes</item>
+        <item>Cursos</item>
+        <item>Outros</item>
+    </string-array>
+    
+    <string-array name="bairros_array">
+        <item>Centro</item>
+        <item>Agronômica</item>
+        <item>Trindade</item>
+        <item>Lagoa da Conceição</item>
+        <item>Campeche</item>
+        <item>Jurerê Internacional</item>
+        <item>Santo Antônio de Lisboa</item>
+        <item>Saco Grande</item>
+        <item>Coqueiros</item>
+        <item>Ingleses</item>
+    </string-array>
+</resources>
