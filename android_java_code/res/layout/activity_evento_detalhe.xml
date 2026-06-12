@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Banner Header Image managed via Glide -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/ivBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="#E2E8F0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000" />
+
+            <!-- Category Pill -->
+            <TextView
+                android:id="@+id/tvTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="16dp"
+                android:background="#2C5FD3"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </FrameLayout>
+
+        <!-- Main details section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTituloDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Título do Evento Ilustrado"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Interactions row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnFavorito"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="☆ Favoritar"
+                    android:backgroundTint="#F59E0B"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="4dp"
+                    android:textSize="12sp"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btnCompartilhar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🔗 Compartilhar"
+                    android:backgroundTint="#3B82F6"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="4dp"
+                    android:textSize="12sp"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SOBRE O EVENTO"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#475569"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDescricaoDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrição completa do evento..."
+                android:textSize="14sp"
+                android:textColor="#334155"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E2E8F0"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Calendar card -->
+            <TextView
+                android:id="@+id/tvDataHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📅 Data: 14/03/2026 às 09:00"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#1E293B"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Location card -->
+            <TextView
+                android:id="@+id/tvLocalizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📍 Local: Teatro Pedro Ivo (Centro)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#1E293B"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Price card -->
+            <TextView
+                android:id="@+id/tvPreco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💰 Entrada: Gratuita"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Conditional community delete button (Requisito 4) -->
+            <Button
+                android:id="@+id/btnExcluir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗑️ Excluir Evento Sugerido"
+                android:backgroundTint="#EF4444"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

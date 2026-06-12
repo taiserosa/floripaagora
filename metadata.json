@@ -1,0 +1,6 @@
+{
+  "name": "Floripa Agora",
+  "description": "Aplicativo de Agenda Cultural de Florianópolis desenvolvido para a Faculdade Municipal de Palhoça (FMP-SC), categorizado em shows, feiras, esportes, cursos e lazer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

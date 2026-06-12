@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1E3F"
+    android:padding="16dp">
+
+    <!-- Header Title of Cultural Agenda "Floripa Agora" -->
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floripa Agora 🏝️"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/tvHeaderSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agenda Cultural Oficial de Florianópolis"
+        android:textSize="12sp"
+        android:textColor="#A5B4FC"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Action Bar for Suggestions and Favorites -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnSugerirEvento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="✍️ Sugerir Evento"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C5FD3"
+            android:layout_marginRight="4dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnMeusFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="❤️ Meus Favoritos"
+            android:textSize="12sp"
+            android:textColor="#D97706"
+            android:backgroundTint="#1F2937"
+            android:layout_marginLeft="4dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1E3A8A"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Category Toggles Horizontal Bar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCatFeiras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎪 Feiras"
+                style="?android:attr/buttonStyleSmall"
+                android:textColor="#3B82F6"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginRight="6dp"/>
+
+            <Button
+                android:id="@+id/btnCatShows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎸 Shows"
+                style="?android:attr/buttonStyleSmall"
+                android:textColor="#3B82F6"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginRight="6dp"/>
+
+            <Button
+                android:id="@+id/btnCatEsportes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚽ Esportes"
+                style="?android:attr/buttonStyleSmall"
+                android:textColor="#3B82F6"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginRight="6dp"/>
+
+            <Button
+                android:id="@+id/btnCatCursos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎓 Cursos"
+                style="?android:attr/buttonStyleSmall"
+                android:textColor="#3B82F6"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginRight="6dp"/>
+
+            <Button
+                android:id="@+id/btnCatOutros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Outros"
+                style="?android:attr/buttonStyleSmall"
+                android:textColor="#3B82F6"
+                android:backgroundTint="#FFFFFF"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Date Search Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="#1E293B"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etDataFiltro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Pesquisar por data (Ex: 14/03/2026)"
+            android:textColorHint="#94A3B8"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:background="@null" />
+
+        <Button
+            android:id="@+id/btnFiltrarData"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="🔍 Ir"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#10B981"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+    <!-- List of Cultural Events in Floripa -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

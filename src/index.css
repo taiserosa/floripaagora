@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;750&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "League Spartan", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-fmp-dark: #000000;
+  --color-fmp-charcoal: #484848;
+  --color-fmp-primary: #062f63;
+  --color-fmp-accent: #2c5fd3;
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+}
+
+/* Custom CSS styling for techno circuits or background layouts mentioned in the document */
+.fmp-gradient-bg {
+  background: radial-gradient(circle at top, #0c3d7c 0%, #062f63 45%, #02142d 100%);
+}
+
+.fmp-circuit-overlay {
+  background-image: 
+    radial-gradient(rgba(44, 95, 211, 0.15) 1px, transparent 1px),
+    radial-gradient(rgba(44, 95, 211, 0.15) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Slim aesthetic high-contrast white scrollbars for the PCB layers list feedback */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 99px;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20px;
+  }
+}
